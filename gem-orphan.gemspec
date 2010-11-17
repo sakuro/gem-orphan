@@ -1,8 +1,7 @@
 Gem::Specification.new do |s|
-  s.name = 'gem_orphan'
+  s.name = 'gem-orphan'
   s.author = 'OZAWA Sakuro'
   s.author = 'sakuro@2238club.org'
-  s.homepage = ''
   s.rubyforge_project = ''
   s.homepage = nil
   s.platform = Gem::Platform::RUBY
@@ -15,6 +14,6 @@ Gem::Specification.new do |s|
     lib/rubygems/commands/orphan_command.rb
     lib/rubygems_plugin.rb
     Rakefile
-    gem_orphan.gemspec
+    gem-orphan.gemspec
   FILES
 end
