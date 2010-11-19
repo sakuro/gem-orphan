@@ -3,7 +3,7 @@ Gem::Specification.new do |s|
   s.author = 'OZAWA Sakuro'
   s.author = 'sakuro@2238club.org'
   s.rubyforge_project = ''
-  s.homepage = nil
+  s.homepage = 'https://github.com/sakuro/gem-orphan'
   s.platform = Gem::Platform::RUBY
   s.summary = 'A RubyGems plugin to show orphaned gems.'
   s.description = <<-EOF.gsub(/^    /, '')
