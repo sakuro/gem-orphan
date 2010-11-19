@@ -6,8 +6,9 @@ Gem::Specification.new do |s|
   s.homepage = nil
   s.platform = Gem::Platform::RUBY
   s.summary = 'A RubyGems plugin to show orphaned gems.'
-  s.description = <<-EOF
-  A RubyGems plugin to show orphaned gems.
+  s.description = <<-EOF.gsub(/^    /, '')
+    gem-orphan is a naive implementation of the 'orphan' subcommand.
+    It finds gems on which no other gems are depending and lists such gems.
   EOF
   s.version = '0.0.1'
   s.files = <<-FILES.split
@@ -15,5 +16,7 @@ Gem::Specification.new do |s|
     lib/rubygems_plugin.rb
     Rakefile
     gem-orphan.gemspec
+    MIT-LICENSE
+    README.md
   FILES
 end
