@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
     gem-orphan is a naive implementation of the 'orphan' subcommand.
     It finds gems on which no other gems are depending and lists such gems.
   EOF
-  s.version = '0.0.3'
+  s.version = '0.0.4'
   s.files = <<-FILES.split
     lib/rubygems/commands/orphan_command.rb
     lib/rubygems_plugin.rb
