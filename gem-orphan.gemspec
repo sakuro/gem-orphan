@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name = 'gem-orphan'
   s.author = 'OZAWA Sakuro'
-  s.author = 'sakuro@2238club.org'
+  s.email = 'sakuro@2238club.org'
   s.rubyforge_project = ''
   s.homepage = 'https://github.com/sakuro/gem-orphan'
   s.platform = Gem::Platform::RUBY
