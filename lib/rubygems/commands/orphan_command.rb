@@ -8,8 +8,8 @@ class Gem::Commands::OrphanCommand < Gem::Command
   end
 
   def execute
-    if Gem::Specification.respond_to?(:all)
-      specs = Gem::Specification.all
+    if Gem::Specification.respond_to?(:to_a)
+      specs = Gem::Specification.to_a
     else
       index = Gem::SourceIndex.from_installed_gems
       specs = index.map {|name, spec| spec }
