@@ -1,5 +1,4 @@
 require 'rubygems/command'
-require 'rubygems/source_index'
 
 class Gem::Commands::OrphanCommand < Gem::Command
 
@@ -8,12 +7,7 @@ class Gem::Commands::OrphanCommand < Gem::Command
   end
 
   def execute
-    if Gem::Specification.respond_to?(:to_a)
-      specs = Gem::Specification.to_a
-    else
-      index = Gem::SourceIndex.from_installed_gems
-      specs = index.map {|name, spec| spec }
-    end
+    specs = Gem::Specification.to_a
     dependencies = specs.map(&:dependencies).flatten.uniq
     runtime_dependencies = dependencies.select {|dep| dep.type == :runtime }
 
