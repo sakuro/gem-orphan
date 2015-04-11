@@ -11,7 +11,7 @@ class Gem::Commands::OrphanCommand < Gem::Command
     dependencies = specs.map(&:dependencies).flatten.uniq
     runtime_dependencies = dependencies.select {|dep| dep.type == :runtime }
 
-    specs.delete_if {|spec| runtime_dependencies.any? {|dep| dep.name == spec.name} }
+    specs.delete_if {|spec| spec.default_gem? || runtime_dependencies.any? {|dep| dep.name == spec.name} }
 
     specs.each do |spec|
       say "#{spec.name} (#{spec.version})"
